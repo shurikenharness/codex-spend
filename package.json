@@ -1,6 +1,6 @@
 {
   "name": "codex-spend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "What your Codex use on this computer would cost at OpenAI's API list prices: today, 7 days, 30 days, all time, by model. Reads local logs only.",
   "license": "MIT",
   "type": "module",

@@ -10,36 +10,36 @@ number shows how much work went through it, priced as if you had paid per token.
 
 ## Run it
 
-You need Node.js 18 or later. Each command downloads one file from this repository's v1.0.0
+You need Node.js 18 or later. Each command downloads one file from this repository's v1.0.1
 release, checks its SHA-256, and runs it only when the checksum matches.
 
 macOS and Linux:
 
 ```sh
-curl -fsSLo codex-spend.mjs https://github.com/shurikenharness/codex-spend/releases/download/v1.0.0/codex-spend.mjs && openssl dgst -sha256 -r codex-spend.mjs | grep -q ^0a5c82e1bde28de6717242f8554b88030569869b2e82712a28f1f4ba5810e135 && node codex-spend.mjs
+curl -fsSLo codex-spend.mjs https://github.com/shurikenharness/codex-spend/releases/download/v1.0.1/codex-spend.mjs && openssl dgst -sha256 -r codex-spend.mjs | grep -q ^6426084dbef25502b909e014672b5f4ecc13eab2e53d87be0d6cd10fddb5a8b1 && node codex-spend.mjs
 ```
 
 Windows (PowerShell):
 
 ```powershell
-irm "https://github.com/shurikenharness/codex-spend/releases/download/v1.0.0/codex-spend.mjs" -OutFile codex-spend.mjs; if ((Get-FileHash codex-spend.mjs).Hash -eq '0a5c82e1bde28de6717242f8554b88030569869b2e82712a28f1f4ba5810e135') { node codex-spend.mjs } else { 'codex-spend.mjs does not match its SHA-256, so it was not run.' }
+irm "https://github.com/shurikenharness/codex-spend/releases/download/v1.0.1/codex-spend.mjs" -OutFile codex-spend.mjs; if ((Get-FileHash codex-spend.mjs).Hash -eq '6426084dbef25502b909e014672b5f4ecc13eab2e53d87be0d6cd10fddb5a8b1') { node codex-spend.mjs } else { 'codex-spend.mjs does not match its SHA-256, so it was not run.' }
 ```
 
 With npx (fetches this repository at the tag; no checksum step):
 
 ```sh
-npx github:shurikenharness/codex-spend#v1.0.0
+npx github:shurikenharness/codex-spend#v1.0.1
 ```
 
-SHA-256 of `codex-spend.mjs` v1.0.0: `0a5c82e1bde28de6717242f8554b88030569869b2e82712a28f1f4ba5810e135`
+SHA-256 of `codex-spend.mjs` v1.0.1: `6426084dbef25502b909e014672b5f4ecc13eab2e53d87be0d6cd10fddb5a8b1`
 
 ### Read it first
 
 It is one file with no dependencies, so it is quick to read before you run it:
 
 ```sh
-curl -fsSLo codex-spend.mjs https://github.com/shurikenharness/codex-spend/releases/download/v1.0.0/codex-spend.mjs
-openssl dgst -sha256 -r codex-spend.mjs     # 0a5c82e1bde28de6717242f8554b88030569869b2e82712a28f1f4ba5810e135
+curl -fsSLo codex-spend.mjs https://github.com/shurikenharness/codex-spend/releases/download/v1.0.1/codex-spend.mjs
+openssl dgst -sha256 -r codex-spend.mjs     # 6426084dbef25502b909e014672b5f4ecc13eab2e53d87be0d6cd10fddb5a8b1
 less codex-spend.mjs
 node codex-spend.mjs
 ```

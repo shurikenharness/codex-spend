@@ -14,7 +14,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const NAME = "codex-spend";
-export const VERSION = "1.0.0";
+export const VERSION = "1.0.1";
 
 // ---------------------------------------------------------------------------------------------
 // Prices. US dollars per million tokens, OpenAI's Standard-tier list prices on the day below.
@@ -31,16 +31,16 @@ export const PRICES = {
   "gpt-6.1-sol": listPrice(2, 0.1, 10, [4, 0.2, 15]),
   "gpt-6.1-terra": listPrice(1, 0.05, 5, [2, 0.1, 7.5]),
   "gpt-6-sol": listPrice(2, 0.2, 10, [4, 0.4, 15]),
-  "gpt-6-luna": listPrice(0.1, 0.01, 0.5),
+  "gpt-6-luna": listPrice(0.1, 0.01, 0.5, [0.2, 0.02, 0.75]),
   "gpt-5.6-sol": listPrice(4, 0.4, 20, [8, 0.8, 30]),
-  "gpt-5.6-terra": listPrice(2, 0.2, 12),
-  "gpt-5.6-luna": listPrice(0.2, 0.02, 1.2),
+  "gpt-5.6-terra": listPrice(2, 0.2, 12, [4, 0.4, 18]),
+  "gpt-5.6-luna": listPrice(0.2, 0.02, 1.2, [0.4, 0.04, 1.8]),
   "gpt-5.6-cyber": listPrice(12.5, 1.25, 75),
   "gpt-5.5-cyber": listPrice(12.5, 1.25, 75),
   "gpt-5.5": listPrice(5, 0.5, 30, [10, 1, 45]),
-  "gpt-5.5-pro": listPrice(30, 30, 180),
+  "gpt-5.5-pro": listPrice(30, 30, 180, [60, 60, 270]),
   "gpt-5.4": listPrice(2.5, 0.25, 15, [5, 0.5, 22.5]),
-  "gpt-5.4-pro": listPrice(30, 30, 180),
+  "gpt-5.4-pro": listPrice(30, 30, 180, [60, 60, 270]),
   "gpt-5.4-mini": listPrice(0.75, 0.075, 4.5),
   "gpt-5.4-nano": listPrice(0.2, 0.02, 1.25),
   "gpt-5.3-codex": listPrice(1.75, 0.175, 14),
