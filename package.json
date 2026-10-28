@@ -1,0 +1,33 @@
+{
+  "name": "codex-spend",
+  "version": "1.0.0",
+  "description": "What your Codex use on this computer would cost at OpenAI's API list prices: today, 7 days, 30 days, all time, by model. Reads local logs only.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "codex-spend": "codex-spend.mjs"
+  },
+  "files": [
+    "codex-spend.mjs"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "commands": "node scripts/commands.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shurikenharness/codex-spend.git"
+  },
+  "homepage": "https://shuriken.sh/tools/codex-spend",
+  "keywords": [
+    "codex",
+    "openai",
+    "cost",
+    "usage",
+    "tokens",
+    "cli"
+  ]
+}
